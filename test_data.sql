@@ -1,0 +1,13 @@
+/*Create test users*/
+
+INSERT INTO `mycommerce`.`users` (`id`, `house_number`, `street`, `city`, `country`, `latitude`, `longitude`, `state`, `zip_code`, `birth_date`, `created_at`, `email`, `first_name`, `middle_name`, `password`, `phone_number`, `updated_at`, `active`,`otpcreated_time` ) 
+VALUES ('1001', '15', '18 cross', 'bangaore', 'india', '12.971891', '77.641151', 'Karnataka', '560103', '1999-02-03', '2019-02-01 06:57:04', 'supplier1@abc.com', 'abc', 'abc', 'xyz', '5599991000', '2019-02-01 06:57:04', TRUE, 2333);
+INSERT INTO `mycommerce`.`users` (`id`, `house_number`, `street`, `city`, `country`, `latitude`, `longitude`, `state`, `zip_code`, `birth_date`, `created_at`, `email`, `first_name`, `middle_name`, `last_name`, `password`, `phone_number`, `updated_at`, `active`,`otpcreated_time`) 
+VALUES ('1002', '17', 'MES tinali', 'Dibrugarh', 'india', '27.472834', '94.911964', 'Assam', '786184', '1999-02-03', '2019-02-01 06:57:04', 'supplier2@abc.com', 'Jadu', 'Ram', 'Ram', 'xyz', '6699991000', '2019-02-01 06:57:04' , TRUE, 9090);
+INSERT INTO `mycommerce`.`users` (`id`, `house_number`, `street`, `city`, `country`, `latitude`, `longitude`, `state`, `zip_code`, `birth_date`, `created_at`, `email`, `first_name`, `last_name`, `password`, `phone_number`, `updated_at`, `active`, `otpcreated_time`) 
+VALUES ('1003', '#20A', 'Hawra', 'Kolkata', 'india', '22.595770', '88.263641', 'West Bangal', '700020', '1999-02-03', '2019-02-01 06:57:04', 'supplier3@abc.com', 'Madhu', 'abc', 'xyz', '9199991000', '2019-02-01 06:57:04', TRUE, 44466);
+INSERT INTO `mycommerce`.`users` (`id`, `house_number`, `street`, `city`, `country`, `latitude`, `longitude`, `state`, `zip_code`, `birth_date`, `created_at`, `email`, `first_name`, `middle_name`, `last_name`, `password`, `phone_number`, `updated_at`, `active`, `otpcreated_time`) 
+VALUES ('1004', '17', 'MES tinali', 'Dibrugarh', 'india', '27.472834', '94.911964', 'Assam', '786184', '1999-02-03', '2019-02-01 06:57:04', 'supplier4@abc.com', 'Ram', 'kumar', 'Ram', 'xyz', '8999991000', '2019-02-01 06:57:04' , TRUE, 6767679);
+INSERT INTO `mycommerce`.`users` (`id`, `house_number`, `street`, `city`, `country`, `latitude`, `longitude`, `state`, `zip_code`, `birth_date`, `created_at`, `email`, `first_name`, `middle_name`, `last_name`, `password`, `phone_number`, `updated_at`, `active`, `otpcreated_time`) 
+VALUES ('1005', '18', 'MES tinali', 'Dibrugarh', 'india', '27.472834', '94.911964', 'Assam', '786184', '1999-02-03', '2019-02-01 06:57:04', 'supplier5@abc.com', 'Ram', 'Ka', 'Bhai', 'xyz', '8999991001', '2019-02-01 06:57:04' , TRUE, 676767);
+

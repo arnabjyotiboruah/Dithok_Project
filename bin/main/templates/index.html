@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"> </script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-sanitize.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styleSheet/allDetailDisplay.css">
+        <title>
+             mycommerce
+         </title>
+         
+    </head>
+    <body>
+        <script src="/loginController.js"></script>
+        <header>
+            MyCommerce  Application : Index page 
+        </header>
+        <section>
+                <nav> 
+                    <input type="text" placeholder="Search" ng-model=parameter>
+                    <button type="submit" ng-click="searchItem(parameter)">Search</button>
+                    <br>
+                    <p>
+       
+                    </p>
+                    <a href="alluserDetails">Get All User Details</a>
+                    <br>
+                    <p>
+    
+                    </p>
+                    <a href="searchEditUser">Search/Edit User</a>
+                    <br>
+                    <p>
+
+                    </p>
+                    <a href="searchOrder">Search Orders</a>
+                    <br>
+                    <p>
+
+                    <!-- </p>
+                    <a href="order">Search Orders by Customer</a>
+                    <br>
+                    <p> -->
+
+                    </p>
+                    <a href="allCustomerOrder">All Customer Order</a>
+                    <br>
+                    <p>
+
+                    </p>
+                    <a href="allproductDetails">Get All Product Details</a>
+                    <br>
+                    <p>
+                        
+                    </p>
+                    <a href="settings">Settings</a>
+
+                    
+                    <div ng-app="loginApp">
+                        <p ng-controller="loginController">
+                            <button type="submit" ng-click="logout()"> logout</button>
+                        </p>
+                    </div>
+                </nav>
+            
+            
+            <article>
+                
+            </article>
+        </section>
+        <footer>
+            <p>@copyright-Dithok Technologies</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "ac2b5721-9e4e-4968-a2d4-a7acea7ba0b4",
+		"name": "Create Multiple User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8080/api/registerUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7b9ccb2-e30c-4698-8d04-49566cc379a3",
+						"exec": [
+							"var fnames = pm.environment.get(\"fnames\");\r",
+							"var mnames = pm.environment.get(\"mnames\");\r",
+							"var lnames = pm.environment.get(\"lnames\");\r",
+							"var emails = pm.environment.get(\"emails\");\r",
+							"var dobs = pm.environment.get(\"dobs\");\r",
+							"var mobnos = pm.environment.get(\"mobnos\");\r",
+							"var passws = pm.environment.get(\"passws\");\r",
+							"var messages = pm.environment.get(\"messages\");\r",
+							"var add1s = pm.environment.get(\"add1s\");\r",
+							"var add2s = pm.environment.get(\"add2s\");\r",
+							"var cities = pm.environment.get(\"cities\");\r",
+							"var states = pm.environment.get(\"states\");\r",
+							"var countries = pm.environment.get(\"countries\");\r",
+							"var zips = pm.environment.get(\"zips\");\r",
+							"var longs = pm.environment.get(\"longs\");\r",
+							"var lats = pm.environment.get(\"lats\");\r",
+							"\r",
+							"if (!fnames) {\r",
+							"    fnames = [\"Ajay\", \"Debo\", \"Yogi\", \"Jadu\", \"Mike\", \"Great\", \"Rana\"];\r",
+							"}\r",
+							"if (!mnames) {\r",
+							"    mnames = [\"Krishna\", \"\", \"\", \"Ram\", \"\", \"\", \"Deep\"];\r",
+							"}\r",
+							"if (!lnames) {\r",
+							"    lnames = [\"Dutta\", \"Raha\", \"D\", \"Nath\", \"Jackson\", \"Khali\", \"Bhuyan\"];\r",
+							"}\r",
+							"if (!emails) {\r",
+							"    emails = [\"ajay@abc.com\", \"raha.debopriyo@gmail.com\", \"yoghesh.d@gmail.com\", \"jadu@abc.com\", \"mike@abc.com\", \"great@abc.com\", \"ranadeep.bhuyan@gmail.com\"];\r",
+							"}\r",
+							"if (!dobs) {\r",
+							"    dobs = [\"1984-03-02\", \"1984-08-02\", \"1984-03-08\", \"1984-03-25\", \"1984-06-02\", \"1984-08-12\", \"1984-03-18\",];\r",
+							"}\r",
+							"if (!mobnos) {\r",
+							"    mobnos = [9988774455, 9611767008, 9791422402, 9966338855, 9966558877, 9955884477, 9900118210];\r",
+							"}\r",
+							"if (!passws) {\r",
+							"    passws = [\"hello123\", \"hello123\", \"hello123\", \"hello123\", \"hello123\", \"hello123\", \"hello123\"];\r",
+							"}\r",
+							"if (!messages) {\r",
+							"    messages = [\"Grocery Items\", \"Home Furniture\", \"Fashio\", \"Apparel\", \"hello123\", \"hello123\", \"hello123\"];\r",
+							"}\r",
+							"if (!add1s) {\r",
+							"    add1s = [\"HAL\", \"NAL\", \"BEL\", \"BMEL\", \"ITPL\", \"Eco\", \"MG Road\"];\r",
+							"}\r",
+							"if (!add2s) {\r",
+							"    add2s = [\"HAL1\", \"NAL1\", \"BEL1\", \"BMEL1\", \"ITPL1\", \"Eco1\", \"MG Road1\"];\r",
+							"}\r",
+							"if (!cities) {\r",
+							"    cities = [\"Blr\", \"Blr\", \"Hyd\", \"Del\", \"Blr\", \"Blr\", \"Hyd\"];\r",
+							"}\r",
+							"if (!states) {\r",
+							"    states = [\"Kar\", \"Kar\", \"Tel\", \"Del\", \"Kar\", \"Kar\", \"Tel\"];\r",
+							"}\r",
+							"if (!countries) {\r",
+							"    countries = [\"India\", \"India\", \"India\", \"India\", \"India\", \"India\", \"India\"];\r",
+							"}\r",
+							"if (!zips) {\r",
+							"    zips = [\"560077\", \"560088\", \"560099\", \"560066\", \"560077\", \"560088\", \"560099\"];\r",
+							"}\r",
+							"if (!longs) {\r",
+							"    longs = [\"\", \"\", \"\", \"\", \"\", \"\", \"35.6\"];\r",
+							"}\r",
+							"if (!lats) {\r",
+							"    lats = [\"\", \"\", \"\", \"\", \"\", \"\", \"22.4\"];\r",
+							"}\r",
+							"\r",
+							"var currentfname = fnames.shift();\r",
+							"var currentmname = mnames.shift();\r",
+							"var currentlname = lnames.shift();\r",
+							"var currentemail = emails.shift();\r",
+							"var currentdob = dobs.shift();\r",
+							"var currentmobno = mobnos.shift();\r",
+							"var currentpassw = passws.shift();\r",
+							"var currentmessage = messages.shift();\r",
+							"var currentadd1 = add1s.shift();\r",
+							"var currentadd2 = add2s.shift();\r",
+							"var currentcity = cities.shift();\r",
+							"var currentstate = states.shift();\r",
+							"var currentcountry = countries.shift();\r",
+							"var currentzip = zips.shift();\r",
+							"var currentlong = longs.shift();\r",
+							"var currentlat = lats.shift();\r",
+							"\r",
+							"pm.environment.set(\"fname\", currentfname);\r",
+							"pm.environment.set(\"fnames\", fnames);\r",
+							"pm.environment.set(\"mname\", currentmname);\r",
+							"pm.environment.set(\"mnames\", mnames);\r",
+							"pm.environment.set(\"lname\", currentlname);\r",
+							"pm.environment.set(\"lnames\", lnames);\r",
+							"pm.environment.set(\"email\", currentemail);\r",
+							"pm.environment.set(\"emails\", emails);\r",
+							"pm.environment.set(\"dob\", currentdob);\r",
+							"pm.environment.set(\"dobs\", dobs);\r",
+							"pm.environment.set(\"mobno\", currentmobno);\r",
+							"pm.environment.set(\"mobnos\", mobnos);\r",
+							"pm.environment.set(\"passw\", currentpassw);\r",
+							"pm.environment.set(\"passws\", passws);\r",
+							"pm.environment.set(\"message\", currentmessage);\r",
+							"pm.environment.set(\"messages\", messages);\r",
+							"pm.environment.set(\"add1\", currentadd1);\r",
+							"pm.environment.set(\"add1s\", add1s);\r",
+							"pm.environment.set(\"add2\", currentadd2);\r",
+							"pm.environment.set(\"add2s\", add2s);\r",
+							"pm.environment.set(\"city\", currentcity);\r",
+							"pm.environment.set(\"cities\", cities);\r",
+							"pm.environment.set(\"state\", currentstate);\r",
+							"pm.environment.set(\"states\", states);\r",
+							"pm.environment.set(\"country\", currentcountry);\r",
+							"pm.environment.set(\"countries\", countries);\r",
+							"pm.environment.set(\"zip\", currentzip);\r",
+							"pm.environment.set(\"zips\", zips);\r",
+							"pm.environment.set(\"long\", currentlong);\r",
+							"pm.environment.set(\"longs\", longs);\r",
+							"pm.environment.set(\"lat\", currentlat);\r",
+							"pm.environment.set(\"lats\", lats);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "08df33fc-f07e-47d7-a04c-c16dc6f6a305",
+						"exec": [
+							"var fnames = pm.environment.get(\"fnames\");\r",
+							"\r",
+							"\r",
+							"if (fnames && fnames.length > 0) {\r",
+							"    postman.setNextRequest(\"http://127.0.0.1:8080/api/registerUser\");\r",
+							"}\r",
+							"else {\r",
+							"    postman.setNextRequest(null);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\"firstName\" : \"{{fname}}\",\r\n\"middleName\" : \"{{mname}}\",\r\n\"lastName\" : \"{{lname}}\",\r\n\"email\" : \"{{email}}\",\r\n\"birthDate\": \"{{dob}}\",\r\n\"phoneNumber\" : {{mobno}},\r\n\"password\" : \"{{passw}}\",\r\n\"message\": \"{{message}}\",\r\n\"address\" : {\r\n            \"addressLine1\" : \"{{add1}}\",\r\n                \"addressLine2\" : \"{{add2}}\" ,\r\n                \"city\" : \"{{city}}\" ,\r\n                \"state\" : \"{{state}}\" ,\r\n                \"country\" : \"{{country}}\" ,\r\n                \"zipCode\" : \"{{zip}}\" ,\r\n                \"longitude\" : \"{{long}}\" ,\r\n                \"latitude\" : \"{{lat}}\"\r\n        }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/registerUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e9f55a58-1b72-4496-871d-f520caca122c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7d2f1853-3e69-4f70-a787-f0b36cfc665c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

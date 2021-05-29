@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+     <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"> </script>
+     <link rel="stylesheet" type="text/css" href="/styleSheet/loginstyle.css">
+    </head>
+<body ng-app="loginApp">
+  <script src="/loginController.js"></script>
+<div ng-controller="loginController">
+  <h1 style="color: aqua;">Login</h1>
+  <nav>
+      <form>
+          <div class="imgcontainer">
+            <img src="/images/img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+        
+          <div class="container">
+            <label for="uname" style="color: aqua;"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" ng-model="user.email" required>
+        
+            <label for="psw" style="color: aqua;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" ng-model="user.password" required>
+                
+            <button type="submit" ng-click="loginUser(user)">Login</button>
+          </div>
+        
+          <div class="container">
+            <button type="button" class="registerbtn">register</button>
+            <button type="button" class="forgotbtn">forgot Password?</button>
+          </div>
+        </form>
+  </nav>
+</div>
+
+
+
+</body>
+</html>

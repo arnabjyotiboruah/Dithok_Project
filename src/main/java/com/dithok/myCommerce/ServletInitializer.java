@@ -1,0 +1,15 @@
+package com.dithok.myCommerce;
+
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+public class ServletInitializer extends SpringBootServletInitializer {
+
+	//Initialization of the spring boot application
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(MyCommerceApplication.class);
+	}
+
+}
+

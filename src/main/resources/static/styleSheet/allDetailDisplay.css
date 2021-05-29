@@ -1,0 +1,116 @@
+* {
+  box-sizing: content-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-image: url("/images/background.jpg");
+}
+
+header {
+  border-bottom-style: solid;
+  width: 1150px;
+  padding: 70px;
+  text-align: center;
+  font-size: 35px;
+  color: #ffffff;
+}
+
+header button {
+  background-color: aqua;
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+
+nav {
+  border-right-style: solid;
+  float: left;
+  width: 200px;
+  height: 905px;
+  /* only for demonstration, should be removed */
+  padding: 20px;
+}
+
+nav a {
+  color: aqua;
+}
+
+/* Style the list inside the menu */
+
+/*table tr{
+  list-style-type:none;
+  padding: 5px;
+  background-color: #dacccc;
+  color: black;
+
+}*/
+
+#allDetails {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#allDetails td, #allDetails th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: #f7f7f7;
+  table-layout: fixed;
+  width: 300px;
+}
+
+#allDetails tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#allDetails tr:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+#allDetails th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #12122b;
+  color: white;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 940px;
+  height: 905px;
+}
+
+/* Clear floats after the columns */
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  border-top-style: solid;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: #290847;
+  background-color: rgb(213, 245, 212)
+}

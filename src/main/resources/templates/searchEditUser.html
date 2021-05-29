@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Edit User</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="/searchEditUserController.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styleSheet/allDetailDisplay.css">
+    <style>
+        .tableInput {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="searchUsersApp">
+
+        <div class="container" ng-controller="searchUsersCtrl" style="display: inline-flex;">
+            <div style="float: left; color:aqua">
+                <h3>Search User</h3>
+                <h5> Get User by mobile number or email</h5>
+                <form ng-submit="searchByEmail()">
+                    Enter mobile or email : <input type="text" ng-model="email" /><br /><br />
+                    <input type="button" value="Find" ng-click="searchByEmail()" /> <br /><br />
+                </form>
+            </div>
+
+            
+            <div ng-model="userFound" ng-show="userFound" style="float: left; margin-left: 500; color:aqua">
+                <h3>User Details</h3>
+                <label>Do you want to edit the below details?: <input type="checkbox" ng-model="readonly" ></label><br/>
+                <table style="color:rgb(219, 161, 75);  background-color: rgba(224, 231, 224, 0); border: 0; ">
+                    <tr>
+                        <td> ID</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.id" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td> First Name</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.name.firstName" ng-readonly="!readonly" /></td>
+                    </tr>
+                    <tr>
+                        <td> Middle Name</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.name.middleName" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td> Last Name</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.name.lastName" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td> Date of birth</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.birthDate" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td> Email </td>
+                        <td><input class="tableInput" type="text" ng-model="userData.email" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td> Phone No</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.phoneNumber" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td> Password</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.password" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>House Number</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.addressLine1" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>Street</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.addressLine2" ng-readonly="!readonly" /></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.city" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.state" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.country" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.zipCode" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>Latitude</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.latitude" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td><input class="tableInput" type="text" ng-model="userData.address.longitude" ng-readonly="!readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td> Registered At </td>
+                        <td><input class="tableInput" type="text" ng-model="userData.createdAt" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td> Last Updated </td>
+                        <td><input class="tableInput" type="text" ng-model="userData.updatedAt" disabled /></td>
+                    </tr>
+                </table>
+                <!-- <input type="submit" style="width: 130px; margin: 10px;" ng-click="editUser()" value="Edit Details"> -->
+                <input type="submit" style="width: 130px; margin: 10px;" ng-click="editUser()" value="Submit Changes" ng-show="readonly">
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
