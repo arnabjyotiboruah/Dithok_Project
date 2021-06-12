@@ -5,6 +5,7 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'eclipse'
 
 group = 'com.dithok'
 version = '0.0.1-SNAPSHOT'
@@ -35,6 +36,15 @@ dependencies {
 	implementation 'org.springframework.retry:spring-retry'
 	implementation 'org.springframework.session:spring-session-core'
 	implementation 'org.modelmapper:modelmapper:2.3.4'
+	implementation 'com.itextpdf:itextpdf:5.5.13.2'
+	implementation 'com.itextpdf:itext-pdfa:5.5.13.2'
+	implementation 'com.itextpdf:kernel:7.0.2'
+	implementation 'com.itextpdf:itext-asian:5.2.0'
+	implementation 'com.itextpdf:sign:7.1.15'
+	implementation 'com.itextpdf:io:7.0.2'
+	implementation 'com.itextpdf:layout:7.0.2'
+	implementation 'com.itextpdf:forms:7.1.15'
+
 		   
 	implementation 'org.hibernate:hibernate-validator:6.1.0.Final'
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
@@ -46,7 +56,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.session:spring-session-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	testImplementation group: 'com.itextpdf', name: 'font-asian', version: '7.1.15'
 	testImplementation group: 'com.icegreen', name: 'greenmail', version: '1.5.0'
+	testImplementation group: 'com.itextpdf', name: 'hyph', version: '7.1.15'
+	
 }
 
 

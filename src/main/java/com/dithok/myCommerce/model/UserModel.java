@@ -1,8 +1,12 @@
 package com.dithok.myCommerce.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -10,8 +14,10 @@ import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.validation.Valid;
@@ -77,6 +83,7 @@ public class UserModel{
     @Column(columnDefinition = "varchar(30) default 'test_id'")
 	private String razorpayId;
 	
+    private String type;
     
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
@@ -222,7 +229,19 @@ public class UserModel{
 		this.razorpayId = razorpayId;
 	}
 	
+	
 
+
+
+	public String getType() {
+		return type;
+	}
+
+
+
+	public void setType(String type) {
+		this.type = type;
+	}
 
 
 
@@ -257,10 +276,53 @@ public class UserModel{
 	/**
 	 * 
 	 */
+	
+
+
+
+	public UserModel(Long id, @Valid NameEmbeddable name, @NotNull Date birthDate, @NotBlank @Email String email,
+			@NotBlank @Length(min = 10, max = 10) String phoneNumber,
+			@NotBlank @NotNull @Length(min = 6) String password, @Valid AddressEmbeddable address, Boolean active,
+			String razorpayId, String type, Date createdAt, Date updatedAt, @Length(min = 6, max = 6) String oTP,
+			long oTPCreatedTime) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.birthDate = birthDate;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.password = password;
+		this.address = address;
+		this.active = active;
+		this.razorpayId = razorpayId;
+		this.type = type;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+		OTP = oTP;
+		OTPCreatedTime = oTPCreatedTime;
+	}
+
+
+
 	public UserModel() {
 		super();
-	
+		// TODO Auto-generated constructor stub
 	}
+	
+	@OneToMany(mappedBy="user", cascade=CascadeType.PERSIST)
+	@JsonIgnore
+	private Set<GroupUserModel> groupUser = new HashSet<GroupUserModel>();
+
+	public Set<GroupUserModel> getGroupUser() {
+		return groupUser;
+	}
+
+
+
+	public void setGroupUser(Set<GroupUserModel> groupUser) {
+		this.groupUser = groupUser;
+	}
+	
 
 	/**
 	 * @param id
@@ -277,24 +339,27 @@ public class UserModel{
 	 * @param oTP
 	 * @param oTPCreatedTime
 	 */
-	public UserModel(Long id, NameEmbeddable name, @NotNull Date birthDate, @NotBlank @Email String email,
-			@NotBlank @Length(min = 10, max = 10) String phoneNumber,
-			@NotBlank @NotNull @Length(min = 6) String password, AddressEmbeddable address, Boolean active,
-			String razorpayId, Date createdAt, Date updatedAt, @Length(min = 6, max = 6) String oTP,
-			long oTPCreatedTime) {
-		this.id = id;
-		this.name = name;
-		this.birthDate = birthDate;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.password = password;
-		this.address = address;
-		this.active = active;
-		this.razorpayId = razorpayId;
-		this.createdAt = createdAt;
-		this.updatedAt = updatedAt;
-		OTP = oTP;
-		OTPCreatedTime = oTPCreatedTime;
-	}
+	
+	
+	
+//	public UserModel(Long id, NameEmbeddable name, @NotNull Date birthDate, @NotBlank @Email String email,
+//			@NotBlank @Length(min = 10, max = 10) String phoneNumber,
+//			@NotBlank @NotNull @Length(min = 6) String password, AddressEmbeddable address, Boolean active,
+//			String razorpayId, Date createdAt, Date updatedAt, @Length(min = 6, max = 6) String oTP,
+//			long oTPCreatedTime) {
+//		this.id = id;
+//		this.name = name;
+//		this.birthDate = birthDate;
+//		this.email = email;
+//		this.phoneNumber = phoneNumber;
+//		this.password = password;
+//		this.address = address;
+//		this.active = active;
+//		this.razorpayId = razorpayId;
+//		this.createdAt = createdAt;
+//		this.updatedAt = updatedAt;
+//		OTP = oTP;
+//		OTPCreatedTime = oTPCreatedTime;
+//	}
 
 }

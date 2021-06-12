@@ -1,5 +1,4 @@
 var app=angular.module("loginApp",['ngCookies']);
-
 app.config(['$qProvider', function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
 }]);

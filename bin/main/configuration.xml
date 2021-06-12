@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+	<info>
+		<date>server</date>
+		<footer>Abc company</footer>
+		<headerImage>C:\itextExamples\download.PNG</headerImage>
+		<description>It is just a trial</description>
+	</info>
+	<headerinfo>
+		<tel1>Contact tel xxxx xxx xxx</tel1>
+		<telinfo>see reverse for call times</telinfo>
+		<tel2>Text Phone xxxx xxx xxx</tel2>
+		<tel2info>used by deaf or speech impaired customers</tel2info>
+		<url>www.abc.co.in</url>
+		<name>Abhishek Gogoi</name>
+		<address>Mitra Bora Lane</address>
+		<openingbalance></openingbalance>
+		<paymentin></paymentin>
+		<paymentout></paymentout>
+		<closingbalance></closingbalance>
+		<accountno></accountno>
+		<sortcode></sortcode>
+		<sheetnumber></sheetnumber>
+	</headerinfo>
+</class>
