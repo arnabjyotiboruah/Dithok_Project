@@ -1,0 +1,14 @@
+2021-06-21 21:10:56 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 7.622 seconds (JVM running for 8.722)
+2021-06-21 21:11:13 [http-nio-8080-exec-10] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-21 21:14:48 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 10896 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-21 21:14:48 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-21 21:14:58 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 10.768 seconds (JVM running for 12.494)
+2021-06-21 21:26:19 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 21448 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-21 21:26:19 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-21 21:26:28 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 10.135 seconds (JVM running for 11.699)
+2021-06-21 21:27:12 [http-nio-8080-exec-4] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-21 21:27:12 [http-nio-8080-exec-4] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-21 21:27:12 [http-nio-8080-exec-4] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-21 21:27:12 [http-nio-8080-exec-4] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-21 21:35:13 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 19912 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-21 21:35:13 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

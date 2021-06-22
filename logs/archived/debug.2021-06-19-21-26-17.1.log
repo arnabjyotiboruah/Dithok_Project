@@ -1,0 +1,19 @@
+2021-06-19 21:26:25 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 8.449 seconds (JVM running for 10.569)
+2021-06-19 21:28:33 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-19 21:28:40 [http-nio-8080-exec-3] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-19 21:28:40 [http-nio-8080-exec-3] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-19 21:28:40 [http-nio-8080-exec-3] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-19 21:28:40 [http-nio-8080-exec-3] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-19 21:34:11 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-19 21:34:18 [http-nio-8080-exec-1] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-19 21:34:18 [http-nio-8080-exec-1] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-19 21:34:18 [http-nio-8080-exec-1] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-19 21:34:18 [http-nio-8080-exec-1] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-19 21:34:43 [http-nio-8080-exec-10] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-19 21:34:43 [http-nio-8080-exec-10] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-19 21:34:43 [http-nio-8080-exec-10] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-19 21:34:43 [http-nio-8080-exec-10] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-19 21:34:59 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Downloaded Data Sync Application
+2021-06-19 21:35:02 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Downloaded Data Sync Application
+2021-06-19 21:35:07 [http-nio-8080-exec-3] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-19 21:35:07 [http-nio-8080-exec-3] INFO  c.d.m.controller.UserController - This is an info message.

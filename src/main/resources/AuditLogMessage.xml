@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+	<info>
+		<login>User logged in to the system from </login>
+		<logout>User logged out of the system from </logout>
+		<datasyncdownload>Downloaded Data Sync Application to </datasyncdownload>
+		<debugLogs>Downloaded Debug Logs</debugLogs>
+		<errorlogs>Downloaded error Logs</errorlogs>
+	</info>
+</class>

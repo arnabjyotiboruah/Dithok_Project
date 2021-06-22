@@ -62,5 +62,11 @@ app.controller("settingController",function($scope,$http,$timeout,$window)
             }
         });
     }
-             
+$scope.getDebugLogDetails = function(){
+	    $window.location.href='/downloaddebug';
+	  }
+$scope.getErrorLogDetails = function(){
+    $window.location.href='/downloaderror';
+  }
+
 });
