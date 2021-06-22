@@ -52,4 +52,15 @@ public class GroupServiceImpl implements GroupsService {
 		return repo.save(updateGroup);
 	}
 
+	@Override
+	public GroupsModel resetGroup(long id) {
+		GroupsModel group = repo.findById(id).get();
+		if(group.isStatus()==false) {
+			group.setStatus(true);
+			return group;
+		}
+		return group;
+		
+	}
+
 }

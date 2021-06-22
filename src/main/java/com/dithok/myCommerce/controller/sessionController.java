@@ -7,6 +7,9 @@ import com.dithok.myCommerce.singleton.Singleton;
 
 import javax.servlet.http.HttpSession;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,10 +28,14 @@ public class sessionController
     sessionMgmtService sessionmgmtservice;
     
     @Autowired
+<<<<<<< Updated upstream
     AuditLogService auditlogService;
     
     @Autowired 
     HttpSession session;
+=======
+    HttpServletResponse response;
+>>>>>>> Stashed changes
 
     /**
      * 
@@ -38,6 +45,7 @@ public class sessionController
      */
     @RequestMapping(method = RequestMethod.POST, value = "/api/checkSession",consumes="application/json")
     boolean checkSession(@RequestBody sessionDto status){
+    	
        try{
         int Cookiestatus = sessionmgmtservice.checksession(status);
         if(Cookiestatus==1){ 

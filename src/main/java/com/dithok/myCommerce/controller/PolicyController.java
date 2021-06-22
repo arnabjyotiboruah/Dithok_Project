@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dithok.myCommerce.model.GroupsModel;
 import com.dithok.myCommerce.model.PoliciesModel;
+import com.dithok.myCommerce.service.GroupsService;
 import com.dithok.myCommerce.service.PoliciesService;
 
 @RestController
@@ -18,8 +20,13 @@ public class PolicyController {
 	@Autowired
 	private PoliciesService policyService;
 	
-	@RequestMapping(value="/policy/add",method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public void add(@RequestBody PoliciesModel policy) {
+	@Autowired
+	private GroupsService groupService;
+	
+	@RequestMapping(value="/policy/add/{id}",method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	public void add(@RequestBody PoliciesModel policy, @PathVariable("id") long id) {
+		GroupsModel group = groupService.getById(id);
+		policy.setGroup(group);
 		policyService.addPolicy(policy);
 	}
 	
