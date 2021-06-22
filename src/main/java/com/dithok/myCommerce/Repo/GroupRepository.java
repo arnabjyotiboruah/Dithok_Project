@@ -6,5 +6,5 @@ import com.dithok.myCommerce.model.GroupsModel;
 import com.dithok.myCommerce.model.UserModel;
 
 public interface GroupRepository extends JpaRepository<GroupsModel, Long> {
-	
+
 }
