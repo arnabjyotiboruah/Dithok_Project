@@ -1,5 +1,6 @@
 package com.dithok.myCommerce.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,7 +18,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
-import com.dithok.myCommerce.audit.Auditable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -43,7 +43,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 		@UniqueConstraint(name = "UK_Users_phoneNumber", columnNames = { "phoneNumber"})
 		})
 @EntityListeners(AuditingEntityListener.class)
-public class UserModel extends Auditable<String>{
+public class UserModel{
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

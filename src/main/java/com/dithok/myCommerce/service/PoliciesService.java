@@ -10,5 +10,6 @@ public interface PoliciesService{
 	public PoliciesModel updatePolicy(PoliciesModel policy);
 	public List<PoliciesModel> listAll();
 	public PoliciesModel getById(long id);
+	public List<PoliciesModel> getByGroupId(long id);
 
 }

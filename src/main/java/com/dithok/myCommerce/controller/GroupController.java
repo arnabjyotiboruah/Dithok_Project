@@ -2,8 +2,13 @@ package com.dithok.myCommerce.controller;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.security.Principal;
 import java.util.List;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +18,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,13 +31,21 @@ import org.springframework.web.bind.annotation.RestController;
 import org.xml.sax.SAXException;
 
 import com.dithok.myCommerce.Repo.PdfRepository;
+import com.dithok.myCommerce.dto.GroupUserDto;
+import com.dithok.myCommerce.dto.LoginDto;
+import com.dithok.myCommerce.dto.sessionDto;
 import com.dithok.myCommerce.model.GroupUserModel;
 import com.dithok.myCommerce.model.GroupsModel;
 import com.dithok.myCommerce.model.PdfModel;
+import com.dithok.myCommerce.model.PoliciesModel;
+import com.dithok.myCommerce.model.RulesModel;
 import com.dithok.myCommerce.model.UserModel;
 import com.dithok.myCommerce.service.GroupUserService;
 import com.dithok.myCommerce.service.GroupsService;
+
 import com.dithok.myCommerce.service.PdfService;
+import com.dithok.myCommerce.service.PoliciesService;
+import com.dithok.myCommerce.service.RulesService;
 import com.dithok.myCommerce.service.UserServiceInterface;
 
 
@@ -49,9 +66,29 @@ public class GroupController {
 	@Autowired
 	private PdfService pdfService;
 	
-	@RequestMapping(value="/group/add/{ids}",method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public void add(@RequestBody GroupsModel group) {
-			groupService.addGroup(group);
+	@Autowired
+	private PoliciesService policyService;
+	
+	@Autowired
+	private RulesService ruleService;
+	
+	@Autowired
+	private HttpServletResponse response;
+	
+	@Autowired
+	private HttpServletRequest request;
+	
+	@Autowired
+	private HttpSession session;
+
+	
+//	private LoginDto login;
+
+	
+	@RequestMapping(value="/group/add",method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	public GroupsModel add(@RequestBody GroupsModel group) {
+			return groupService.addGroup(group);
+			
 	}
 	
 	@RequestMapping(value="/group/delete/{id}",method=RequestMethod.DELETE, produces=MediaType.APPLICATION_JSON_VALUE)
@@ -70,14 +107,14 @@ public class GroupController {
 		return groupService.listAll();
 	}
 	
-	@RequestMapping(value="/group/listAll/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/group/list/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public GroupsModel getGroup(@PathVariable("id") long id) {
 		return groupService.getById(id);
 	}
-	@RequestMapping(value="/group/addUser/{id}", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public GroupUserModel addUsertoGroup(@RequestBody String email,@PathVariable("id") long id) {
-		UserModel user = userService.findUserByEmail(email);
-		GroupsModel group = groupService.getById(id);
+	@RequestMapping(value="/group/addUser", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	public GroupUserModel addUsertoGroup(@RequestBody GroupUserDto groupUser) {
+		UserModel user = userService.findUserByEmail(groupUser.getEmail());
+		GroupsModel group = groupService.getById(groupUser.getId());
 		GroupUserModel userGroup = new GroupUserModel();
 		userGroup.setUser(user);
 		userGroup.setGroup(group);
@@ -88,11 +125,16 @@ public class GroupController {
 		
 	}
 	
+	@RequestMapping(value="/group/reset/{id}", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+	public GroupsModel addResetGroup(@PathVariable("id") long id) {
+		return groupService.resetGroup(id);
+	}
+	
 	@RequestMapping(value="/group/print", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity pdfReport() throws IOException, ParserConfigurationException, SAXException{
 		List<PdfModel> tr = pdfRepo.findAll();
-		
-//		ReadXml.readData();
+	
+	//		ReadXml.readData();
 		
 //		ByteArrayInputStream bis = pdfService.sqlPDFReport(tr);
 //		
@@ -116,7 +158,33 @@ public class GroupController {
 
 		return response;
 		
-		
-		
 	}
+	
+	
+	@RequestMapping(value="/group/applyPolicy", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public void applyPolicy() {
+
+		String email = session.getAttribute("loggedInUser").toString();
+		UserModel user = userService.findUserByEmail(email);
+		long userNewId = user.getId();
+		GroupUserModel groupUser = groupUserService.findByUserId(userNewId);
+		long groupId = groupUser.getGroup_id();
+		List<PoliciesModel> policy = policyService.getByGroupId(groupId);
+			for(int i=0; i<policy.size();i++) {
+				PoliciesModel eachPolicy = policy.get(i);
+				List<RulesModel> ruleList = ruleService.findByPolicyId(eachPolicy.getPolicy_id());
+					for(int j=0; j<ruleList.size();j++) {
+					RulesModel rule = ruleList.get(j);
+						if(rule.getType() == "Javascript") {
+							
+			}
+		System.out.println("Empty rule list");
+			}
+		}
+	}
+	
+//	@RequestMapping(value="/group/cookie", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+//	public String getCookie(Authentication auth) {
+//		 auth.
+//	}
 }

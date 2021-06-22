@@ -10,5 +10,6 @@ public interface GroupsService {
 	public GroupsModel updateGroup(GroupsModel group);
 	public List<GroupsModel> listAll();
 	public GroupsModel getById(long id);
+	public GroupsModel resetGroup(long id);
 
 }

@@ -19,4 +19,14 @@ public class GroupUserServiceImpl implements GroupUserService {
 		
 	}
 
+	@Override
+	public GroupUserModel findByUserId(long id) {
+		return repo.findByUserId(id);
+	}
+
+	@Override
+	public GroupUserModel findByGroupId(long id) {
+		return repo.findByGroupId(id);
+	}
+
 }
