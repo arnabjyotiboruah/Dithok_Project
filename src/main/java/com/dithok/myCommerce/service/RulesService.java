@@ -10,6 +10,5 @@ public interface RulesService {
 	public RulesModel updateRule(RulesModel group);
 	public List<RulesModel> listAll();
 	public RulesModel getById(long id);
-	public List<RulesModel> findByPolicyId(long id);
 
 }

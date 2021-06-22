@@ -185,20 +185,6 @@ public class GroupsModel {
 	public void setGroupResource(Set<GroupResourceModel> groupResource) {
 		this.groupResource = groupResource;
 	}
-	
-	@OneToMany(mappedBy="group", cascade=CascadeType.PERSIST)
-	@JsonIgnore
-	private Set<PoliciesModel> policy = new HashSet<PoliciesModel>();
-
-
-	public Set<PoliciesModel> getPolicy() {
-		return policy;
-	}
-
-	public void setPolicy(Set<PoliciesModel> policy) {
-		this.policy = policy;
-	}
-	
 
 	
 	
