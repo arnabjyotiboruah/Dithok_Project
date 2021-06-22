@@ -34,5 +34,6 @@ public interface UserServiceInterface {
 
 	public UserModel findUserById(long id);
 	public long getIdByEmail(String email);
+	
 
 }

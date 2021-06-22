@@ -1,5 +1,6 @@
 package com.dithok.myCommerce.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -43,6 +44,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 		})
 @EntityListeners(AuditingEntityListener.class)
 public class UserModel{
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

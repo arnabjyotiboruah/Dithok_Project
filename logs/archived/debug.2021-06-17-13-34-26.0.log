@@ -1,0 +1,17 @@
+2021-06-17 13:29:38 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 6.702 seconds (JVM running for 7.68)
+2021-06-17 13:29:49 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-17 13:29:49 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-17 13:29:49 [http-nio-8080-exec-6] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-17 13:29:49 [http-nio-8080-exec-6] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-17 13:32:12 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 11564 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:32:12 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 13:32:18 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 6.086 seconds (JVM running for 7.148)
+2021-06-17 13:32:37 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-17 13:32:37 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-17 13:32:37 [http-nio-8080-exec-6] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-17 13:32:37 [http-nio-8080-exec-6] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-17 13:33:48 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 11820 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:33:48 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 13:33:54 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 6.515 seconds (JVM running for 7.699)
+2021-06-17 13:34:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 3376 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:34:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

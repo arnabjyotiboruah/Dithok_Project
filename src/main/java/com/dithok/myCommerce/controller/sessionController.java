@@ -3,6 +3,9 @@ package com.dithok.myCommerce.controller;
 import com.dithok.myCommerce.dto.sessionDto;
 import com.dithok.myCommerce.service.sessionMgmtService;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +22,9 @@ public class sessionController
 
     @Autowired
     sessionMgmtService sessionmgmtservice;
+    
+    @Autowired
+    HttpServletResponse response;
 
     /**
      * 
@@ -28,6 +34,7 @@ public class sessionController
      */
     @RequestMapping(method = RequestMethod.POST, value = "/api/checkSession",consumes="application/json")
     boolean checkSession(@RequestBody sessionDto status){
+    	
        try{
         int Cookiestatus = sessionmgmtservice.checksession(status);
         if(Cookiestatus==1){ 

@@ -1,10 +1,11 @@
 package com.dithok.myCommerce.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 import com.dithok.myCommerce.Repo.UserRepository;
@@ -21,6 +22,8 @@ import com.dithok.myCommerce.model.UserModel;
 import com.dithok.myCommerce.dto.EditUserDto;
 import com.dithok.myCommerce.dto.GenerateOtp;
 import org.springframework.beans.BeanUtils;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
@@ -308,5 +311,9 @@ public class UserServiceImpl implements UserServiceInterface {
 		return userRepo.findById(id);
 
 	}
+
+
+	
+
 
 }

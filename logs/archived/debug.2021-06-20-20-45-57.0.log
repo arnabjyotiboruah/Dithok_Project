@@ -1,0 +1,15 @@
+2021-06-20 20:43:42 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 8496 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-20 20:43:42 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-20 20:43:58 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 16.661 seconds (JVM running for 19.484)
+2021-06-20 20:44:39 [http-nio-8080-exec-10] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-20 20:44:45 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - User Downloaded Data Sync Application
+2021-06-20 20:45:58 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 16552 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-20 20:45:58 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-20 20:46:10 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 13.295 seconds (JVM running for 15.28)
+2021-06-20 20:46:37 [http-nio-8080-exec-1] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-20 20:46:42 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - User Downloaded Data Sync Application
+2021-06-20 20:46:49 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-20 20:46:49 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-20 20:46:49 [http-nio-8080-exec-9] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-20 20:46:49 [http-nio-8080-exec-9] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-20 20:49:39 [http-nio-8080-exec-2] INFO  c.d.m.controller.UserController - User Viewed Audit Log

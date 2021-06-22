@@ -53,4 +53,9 @@ public class RuleServiceImpl implements RulesService{
 		return repo.findById(id).get();
 	}
 
+	@Override
+	public List<RulesModel> findByPolicyId(long id) {
+		return repo.findByPolicyId(id);
+	}
+
 }

@@ -1,0 +1,17 @@
+2021-06-19 20:58:56 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 12.858 seconds (JVM running for 16.081)
+2021-06-19 21:03:44 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 300 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-19 21:03:44 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-19 21:03:52 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 8.648 seconds (JVM running for 10.138)
+2021-06-19 21:04:40 [http-nio-8080-exec-1] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-19 21:04:51 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-19 21:04:51 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-19 21:04:51 [http-nio-8080-exec-6] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-19 21:04:51 [http-nio-8080-exec-6] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-19 21:05:28 [http-nio-8080-exec-3] ERROR c.d.m.controller.UserController - User login failed because password did not match with Database
+2021-06-19 21:05:38 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-19 21:05:44 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-19 21:05:44 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-19 21:05:44 [http-nio-8080-exec-8] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-19 21:05:44 [http-nio-8080-exec-8] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-19 21:26:17 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 8244 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-19 21:26:17 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

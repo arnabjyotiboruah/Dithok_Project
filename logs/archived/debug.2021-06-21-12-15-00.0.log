@@ -1,0 +1,19 @@
+2021-06-21 12:06:36 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 14108 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-21 12:06:36 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-21 12:06:47 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 12.007 seconds (JVM running for 13.531)
+2021-06-21 12:07:20 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-21 12:07:27 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Downloaded Data Sync Application
+2021-06-21 12:10:17 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-21 12:10:17 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-21 12:10:17 [http-nio-8080-exec-6] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-21 12:10:17 [http-nio-8080-exec-6] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-21 12:13:57 [http-nio-8080-exec-7] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-21 12:13:57 [http-nio-8080-exec-7] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-21 12:13:57 [http-nio-8080-exec-7] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-21 12:13:57 [http-nio-8080-exec-7] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-21 12:14:42 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-21 12:14:42 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-21 12:14:42 [http-nio-8080-exec-9] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-21 12:14:42 [http-nio-8080-exec-9] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-21 12:15:00 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 19412 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-21 12:15:00 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

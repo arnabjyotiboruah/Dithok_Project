@@ -1,0 +1,15 @@
+2021-06-17 13:41:52 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-17 13:41:52 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-17 13:41:52 [http-nio-8080-exec-9] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-17 13:41:52 [http-nio-8080-exec-9] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-17 19:28:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 16560 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 19:28:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 19:28:40 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 14.019 seconds (JVM running for 16.05)
+2021-06-17 19:28:58 [http-nio-8080-exec-5] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-17 19:29:05 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-17 19:29:05 [http-nio-8080-exec-9] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-17 19:29:05 [http-nio-8080-exec-9] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-17 19:29:05 [http-nio-8080-exec-9] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-17 19:47:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 11496 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 19:47:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 19:47:41 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 15.525 seconds (JVM running for 17.527)

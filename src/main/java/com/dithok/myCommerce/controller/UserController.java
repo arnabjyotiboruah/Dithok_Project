@@ -2,18 +2,23 @@ package com.dithok.myCommerce.controller;
 
 import java.util.List;
 import java.util.regex.Pattern;
+
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import com.dithok.myCommerce.dto.EditUserDto;
 import com.dithok.myCommerce.dto.ForgotPasswordDto;
 import com.dithok.myCommerce.dto.GenerateOtp;
+import com.dithok.myCommerce.dto.GroupUserDto;
 import com.dithok.myCommerce.dto.LoginDto;
 import com.dithok.myCommerce.dto.RegisterDto;
 import com.dithok.myCommerce.dto.ResetPasswordDto;
 import com.dithok.myCommerce.dto.UserAddressDto;
 import com.dithok.myCommerce.exception.MyCommerceException;
+
 import com.dithok.myCommerce.model.UserModel;
+
 import com.dithok.myCommerce.service.UserServiceInterface;
 
 import com.dithok.myCommerce.service.sessionMgmtService;
@@ -22,6 +27,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,8 +47,9 @@ public class UserController {
     @Autowired
     UserServiceInterface userServiceInterface;
 
-
-
+    @Autowired
+    UserDetailsService userService;
+    
     @Autowired
     HttpServletRequest request;
 
@@ -106,10 +115,13 @@ public class UserController {
             {
             	UserModel user = userServiceInterface.findUserByEmail(loginUser.getEmail());
             	String userId = "";
-            	if(user!=null)
-            	{
-            		userId = user.getId().toString();
-            	}
+            	if(user!=null) {
+            			userId = user.getId().toString();
+            			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            			String name = auth.getName();
+            			System.out.println(name);
+        
+            }
                 return new ResponseEntity<>(new MyCommerceException(1,userId), HttpStatus.OK);
           
             }
