@@ -1,0 +1,10 @@
+2021-06-18 20:28:09 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 7.047 seconds (JVM running for 8.101)
+2021-06-18 20:28:25 [http-nio-8080-exec-2] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-18 20:30:27 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 21308 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-18 20:30:27 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-18 20:30:34 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 6.936 seconds (JVM running for 8.344)
+2021-06-18 20:56:28 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 10112 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-18 20:56:28 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-18 20:56:39 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 12.069 seconds (JVM running for 14.316)
+2021-06-18 20:56:58 [http-nio-8080-exec-5] ERROR c.d.m.controller.UserController - User login failed because password did not match with Database
+2021-06-18 20:57:10 [http-nio-8080-exec-3] INFO  c.d.m.controller.UserController - User Logged In

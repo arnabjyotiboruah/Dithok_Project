@@ -1,0 +1,4 @@
+2021-06-17 20:10:09 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 17.163 seconds (JVM running for 19.626)
+2021-06-17 21:13:21 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 15072 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 21:13:21 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 21:13:38 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 17.828 seconds (JVM running for 21.265)

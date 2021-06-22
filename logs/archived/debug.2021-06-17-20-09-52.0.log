@@ -1,0 +1,14 @@
+2021-06-17 19:51:45 [http-nio-8080-exec-10] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-17 19:51:45 [http-nio-8080-exec-1] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-17 19:51:57 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-17 19:51:57 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-17 19:51:57 [http-nio-8080-exec-6] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-17 19:51:57 [http-nio-8080-exec-6] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-17 19:58:06 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 13916 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 19:58:06 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 19:58:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 20.353 seconds (JVM running for 22.569)
+2021-06-17 20:06:56 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 13348 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 20:06:56 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 20:07:10 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 13.764 seconds (JVM running for 15.797)
+2021-06-17 20:09:52 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 8552 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 20:09:52 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

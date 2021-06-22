@@ -1,0 +1,13 @@
+2021-06-17 12:58:16 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 6.659 seconds (JVM running for 7.443)
+2021-06-17 13:11:01 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 9120 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:11:01 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 13:11:06 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 6.006 seconds (JVM running for 6.859)
+2021-06-17 13:13:57 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 12436 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:13:57 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 13:14:02 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 5.591 seconds (JVM running for 6.548)
+2021-06-17 13:21:03 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 7232 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:21:03 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-17 13:21:08 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 5.754 seconds (JVM running for 6.574)
+2021-06-17 13:21:27 [http-nio-8080-exec-4] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-17 13:23:24 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 17084 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-17 13:23:24 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

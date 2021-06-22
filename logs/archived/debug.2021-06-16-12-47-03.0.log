@@ -1,0 +1,15 @@
+2021-06-16 12:20:58 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 8364 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-16 12:20:58 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-16 12:21:07 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 9.913 seconds (JVM running for 12.15)
+2021-06-16 12:22:01 [http-nio-8080-exec-4] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-16 12:44:02 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 7364 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-16 12:44:02 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-16 12:44:12 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 11.286 seconds (JVM running for 12.783)
+2021-06-16 12:44:44 [http-nio-8080-exec-10] INFO  c.d.m.controller.UserController - User Logged In
+2021-06-16 12:47:03 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 15932 (C:\Users\hp\Downloads\Dithok_Project-Animesh\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-Animesh)
+2021-06-16 12:47:03 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-16 12:47:13 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 9.763 seconds (JVM running for 11.369)
+2021-06-16 12:47:22 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-16 12:47:22 [http-nio-8080-exec-6] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-16 12:47:22 [http-nio-8080-exec-6] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-16 12:47:22 [http-nio-8080-exec-6] ERROR c.d.m.controller.UserController - This is an error message.
