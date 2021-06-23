@@ -1,107 +1,33 @@
 package com.dithok.myCommerce.controller;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.security.Principal;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
-<<<<<<< Updated upstream
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
-=======
-
-import javax.servlet.http.Cookie;
->>>>>>> Stashed changes
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.xml.parsers.ParserConfigurationException;
-import org.springframework.core.io.Resource;
-
-import com.dithok.myCommerce.Repo.AuditLogRepository;
 import com.dithok.myCommerce.dto.EditUserDto;
 import com.dithok.myCommerce.dto.ForgotPasswordDto;
 import com.dithok.myCommerce.dto.GenerateOtp;
-import com.dithok.myCommerce.dto.GroupUserDto;
 import com.dithok.myCommerce.dto.LoginDto;
 import com.dithok.myCommerce.dto.RegisterDto;
 import com.dithok.myCommerce.dto.ResetPasswordDto;
 import com.dithok.myCommerce.dto.UserAddressDto;
 import com.dithok.myCommerce.exception.MyCommerceException;
-<<<<<<< Updated upstream
-import com.dithok.myCommerce.model.AuditLog;
-import com.dithok.myCommerce.model.PdfModel;
 import com.dithok.myCommerce.model.UserModel;
-import com.dithok.myCommerce.service.AuditLogService;
-=======
-
-import com.dithok.myCommerce.model.UserModel;
-
->>>>>>> Stashed changes
 import com.dithok.myCommerce.service.UserServiceInterface;
 
 import com.dithok.myCommerce.service.sessionMgmtService;
-import com.dithok.myCommerce.singleton.Singleton;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.itextpdf.io.source.ByteArrayOutputStream;
-import com.itextpdf.kernel.color.Color;
-import com.itextpdf.layout.property.TextAlignment;
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.FontFactory;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfWriter;
-
-import org.hibernate.engine.jdbc.StreamUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-<<<<<<< Updated upstream
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.oauth2.core.oidc.user.OidcUser;
-import org.springframework.ui.ModelMap;
-=======
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetailsService;
->>>>>>> Stashed changes
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
-import org.xml.sax.SAXException;
 
 @RestController
 @RequestMapping("/")
@@ -113,9 +39,8 @@ public class UserController {
     @Autowired
     UserServiceInterface userServiceInterface;
 
-    @Autowired
-    UserDetailsService userService;
-    
+
+
     @Autowired
     HttpServletRequest request;
 
@@ -128,15 +53,8 @@ public class UserController {
     @Autowired
     sessionMgmtService sessionmgmtservice;
     
-    @Autowired
-    AuditLogService auditlogService;
     
-    @Autowired
-	private AuditLogRepository repository;
-  
-    
-    
-    Logger logger = LoggerFactory.getLogger(UserController.class); 
+
 
     
 
@@ -188,28 +106,13 @@ public class UserController {
             {
             	UserModel user = userServiceInterface.findUserByEmail(loginUser.getEmail());
             	String userId = "";
-<<<<<<< Updated upstream
             	if(user!=null)
             	{
             		userId = user.getId().toString();
-            		session.setAttribute("loggedInUser", loginUser.getEmail());
-            		Singleton single = Singleton.getInstance();
-            		single.logInMessage(auditlogService,loginUser.getEmail());
             	}
-            	logger.info("User Logged In");
-=======
-            	if(user!=null) {
-            			userId = user.getId().toString();
-            			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-            			String name = auth.getName();
-            			System.out.println(name);
-        
-            }
->>>>>>> Stashed changes
                 return new ResponseEntity<>(new MyCommerceException(1,userId), HttpStatus.OK);
           
             }
-            logger.error("User login failed because password did not match with Database");
             return new ResponseEntity<MyCommerceException>(new MyCommerceException(2, "Password dont match"), HttpStatus.OK);
         
         }catch(Exception E){
@@ -340,7 +243,6 @@ public class UserController {
 	        try{
 			    session.setAttribute("all_User_Details", "all_User_Details");
                 sessionmgmtservice.renewSession();
-                System.out.println(session.getAttribute("loggedInUser").toString());
 	            return new ResponseEntity<List<UserModel>>(userServiceInterface.findAll(), HttpStatus.OK);
 	        }catch(Exception E){
 	            return new ResponseEntity<List<UserModel>>(HttpStatus.BAD_REQUEST);
@@ -490,145 +392,5 @@ public class UserController {
                 return new ResponseEntity<MyCommerceException>(new MyCommerceException(0, "Error: "+ E), HttpStatus.BAD_REQUEST);
             }
 
-	}
-	@RequestMapping(value = "/api/auditLogDetails", method = RequestMethod.GET, produces =  { MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
-	public List<AuditLog> findAll() {
-		logger.info("User Viewed Audit Log");
-		logger.debug("This is a debug message.");
-        logger.info("This is an info message.");
-        logger.warn("This is a warn message.");
-        logger.error("This is an error message.");
-		return auditlogService.findAll();
-	}
-	@RequestMapping(value = "/api/getauditLogDetails/{date}", method = RequestMethod.GET, produces =  { MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
-	public List<AuditLog> findByDate(@PathVariable("date")@DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date searchDate){
-	    return auditlogService.findByDate(searchDate);
-	    		
-	}
-	@RequestMapping(value="/group/cookie", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public String getCookie() {
-		 return session.getAttribute("loggedInUser").toString();
-	}
-  	      
-	
-	@RequestMapping(value = "/api/IP", method = RequestMethod.GET, produces =  { MimeTypeUtils.APPLICATION_JSON_VALUE }, headers = "Accept=application/json")
-	public void PythonScript() throws IOException {
-		InetAddress IP=InetAddress.getLocalHost();
-		System.out.println(IP.toString());
-    }
-
-	@RequestMapping(value = "/api/downloadFile", method = RequestMethod.GET)
-    public StreamingResponseBody getSteamingFile(HttpServletResponse response) throws IOException {
-        response.setContentType("application/zip");
-        response.setHeader("Content-Disposition", "attachment; filename=\"DataSync.zip\"");
-        InputStream inputStream = new FileInputStream(new File("C:/Users/hp/Desktop/DataSync/DataSync.zip"));
-        logger.info("User Downloaded Data Sync Application");
-        return outputStream -> {
-            int nRead;
-            byte[] data = new byte[1024];
-            while ((nRead = inputStream.read(data, 0, data.length)) != -1) {
-                outputStream.write(data, 0, nRead);
-            }
-            Singleton single = Singleton.getInstance();
-    		single.syncDownloadMessage(auditlogService,session.getAttribute("loggedInUser").toString());
-        };
-    }
-	@GetMapping("/api/report/auditLog")
-	public ResponseEntity<Resource> generateExcelReport() throws IOException, DocumentException {
-		List<AuditLog> auditlog = repository.findAll();
-
-		Document document = new Document(PageSize.A4, 25, 25, 25, 25);
-
-		ByteArrayOutputStream os = new ByteArrayOutputStream();
-
-		PdfWriter.getInstance(document, os);
-
-		document.open();
-
-		Paragraph title = new Paragraph("Audit Log Report",
-				FontFactory.getFont(FontFactory.HELVETICA, 18, Font.BOLD, new BaseColor(0, 0, 255)));
-
-		document.add(title);
-		DateFormat df = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-		
-		Paragraph title2= new Paragraph("Report generated on " + df.format(new Date()),FontFactory.getFont(FontFactory.HELVETICA, 14, Font.BOLD));
-		document.add(title2);
-
-		PdfPTable table = new PdfPTable(3);
-		table.setSpacingBefore(25);
-		table.setSpacingAfter(25);
-
-		PdfPCell c1 = new PdfPCell(new Phrase("TIMESTAMP",FontFactory.getFont(FontFactory.HELVETICA, 14, Font.BOLD, new BaseColor(0, 0, 255))));
-		c1.setHorizontalAlignment(Element.ALIGN_CENTER);
-		c1.setVerticalAlignment(Element.ALIGN_MIDDLE);
-		table.addCell(c1);
-
-		PdfPCell c2 = new PdfPCell(new Phrase("USERNAME",FontFactory.getFont(FontFactory.HELVETICA, 14, Font.BOLD, new BaseColor(0, 0, 255))));
-		c2.setHorizontalAlignment(Element.ALIGN_CENTER);
-		c2.setVerticalAlignment(Element.ALIGN_MIDDLE);
-		table.addCell(c2);
-
-		PdfPCell c3 = new PdfPCell(new Phrase("DETAILS",FontFactory.getFont(FontFactory.HELVETICA, 14, Font.BOLD, new BaseColor(0, 0, 255))));
-		c3.setHorizontalAlignment(Element.ALIGN_CENTER);
-		c3.setVerticalAlignment(Element.ALIGN_MIDDLE);
-		table.addCell(c3);
-
-
-		for (AuditLog auditlog1 : auditlog) {
-			table.addCell(String.valueOf(auditlog1.getTimestamp()));
-			table.addCell(auditlog1.getUserName());
-			table.addCell(auditlog1.getDetails());
-		}
-
-		document.add(table);
-		
-		document.close();
-
-		ByteArrayInputStream is = new ByteArrayInputStream(os.toByteArray());
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.parseMediaType("application/pdf"));
-		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
-		headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=AuditLogPdfReport.pdf");
-
-		ResponseEntity<Resource> response = new ResponseEntity<Resource>(new InputStreamResource(is), headers,
-				HttpStatus.OK);
-
-		return response;
-	}
-	@RequestMapping(value = "/downloaddebug", method = RequestMethod.GET) 
-	public ResponseEntity<Object> downloadFiledebug() throws IOException  {
-	   String filename = "C:/Users/hp/Downloads/Dithok_Project-Animesh/logs/debug.log";
-	   File file = new File(filename);
-	   InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
-	   HttpHeaders headers = new HttpHeaders();
-   
-	   headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getName()));
-	   headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-	   headers.add("Pragma", "no-cache");
-	   headers.add("Expires", "0");
-	      
-	   ResponseEntity<Object> 
-	   responseEntity = ResponseEntity.ok().headers(headers).contentLength(file.length()).contentType(
-	      MediaType.parseMediaType("application/txt")).body(resource);
-	   return responseEntity;
-	}
-
-	@RequestMapping(value = "/downloaderror", method = RequestMethod.GET) 
-	public ResponseEntity<Object> downloadFile() throws IOException  {
-	   String filename = "C:/Users/hp/Downloads/Dithok_Project-Animesh/logs/error.log";
-	   File file = new File(filename);
-	   InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
-	   HttpHeaders headers = new HttpHeaders();
-   
-	   headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getName()));
-	   headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-	   headers.add("Pragma", "no-cache");
-	   headers.add("Expires", "0");
-	      
-	   ResponseEntity<Object> 
-	   responseEntity = ResponseEntity.ok().headers(headers).contentLength(file.length()).contentType(
-	      MediaType.parseMediaType("application/txt")).body(resource);
-	   return responseEntity;
 	}
 }

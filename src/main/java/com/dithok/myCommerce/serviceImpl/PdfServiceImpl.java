@@ -100,7 +100,7 @@ public class PdfServiceImpl implements PdfService{
 		
 		
 		
-		String imagePath = new File(info.getHeaderImage()).getAbsolutePath(); 
+		String imagePath = info.getHeaderImage();
 		ImageData data = null;
 		try {
 			data = ImageDataFactory.create(imagePath);

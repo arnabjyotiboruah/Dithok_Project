@@ -19,7 +19,6 @@ public class GroupUserDto {
 		this.email = email;
 	}
 	public GroupUserDto(long id, String email) {
-		super();
 		this.id = id;
 		this.email = email;
 	}

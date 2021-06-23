@@ -1,14 +1,7 @@
 package com.dithok.myCommerce.controller;
 
 import com.dithok.myCommerce.dto.sessionDto;
-import com.dithok.myCommerce.service.AuditLogService;
 import com.dithok.myCommerce.service.sessionMgmtService;
-import com.dithok.myCommerce.singleton.Singleton;
-
-import javax.servlet.http.HttpSession;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,16 +19,6 @@ public class sessionController
 
     @Autowired
     sessionMgmtService sessionmgmtservice;
-    
-    @Autowired
-<<<<<<< Updated upstream
-    AuditLogService auditlogService;
-    
-    @Autowired 
-    HttpSession session;
-=======
-    HttpServletResponse response;
->>>>>>> Stashed changes
 
     /**
      * 
@@ -45,7 +28,6 @@ public class sessionController
      */
     @RequestMapping(method = RequestMethod.POST, value = "/api/checkSession",consumes="application/json")
     boolean checkSession(@RequestBody sessionDto status){
-    	
        try{
         int Cookiestatus = sessionmgmtservice.checksession(status);
         if(Cookiestatus==1){ 
@@ -116,8 +98,7 @@ public class sessionController
         value="/api/logoutSession"
     )
     public Object logoutSession(){
-    	Singleton single = Singleton.getInstance();
-		single.logOutMessage(auditlogService,session.getAttribute("loggedInUser").toString());
+
         // int timeParam=resParam.getSessionInactiveInterval();
         int val =sessionmgmtservice.logoutSession();
         JSONObject obj=new JSONObject();

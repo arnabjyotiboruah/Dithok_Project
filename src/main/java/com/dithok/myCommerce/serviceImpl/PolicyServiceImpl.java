@@ -49,11 +49,6 @@ public class PolicyServiceImpl implements PoliciesService {
 		return repo.findById(id).get();
 	}
 
-	@Override
-	public List<PoliciesModel> getByGroupId(long id) {
-		return repo.findByGroupId(id);
-	}
-
 	
 
 }

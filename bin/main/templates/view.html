@@ -17,9 +17,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
         <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"> </script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-sanitize.min.js"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
   </head>
   <body>
+  <style>
+        .mul-select{
+            width: 830px;
+        }
+
+    </style> 
     <!-- The sidebar -->
 
     <nav class="navbar navbar-expand-sm">
@@ -61,6 +68,16 @@
             <option value="none"></option>
             </select>
           </div>
+          <div class="form-group">
+       <label > select Policy: </label>
+       <br>
+                    <select class="mul-select" multiple="true">
+                        <option value="policy0">policy0</option>
+                        <option value="policy1">policy1</option>
+                        <option value="policy2">policy2</option>
+
+                    </select>
+</div>
     
           <div class="form-group">
         <label > Permission : </label>
@@ -78,6 +95,14 @@
 
       </div>
     </div>
-
+ <script>
+        $(document).ready(function(){
+            $(".mul-select").select2({
+                    placeholder: "select country", //placeholder
+                    tags: true,
+                    tokenSeparators: ['/',',',';'," "] 
+                });
+            })
+    </script>
   </body>
 </html>

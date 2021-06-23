@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>accessGroup</title>
+    <link rel="stylesheet" type="text/css" href="/styleSheet/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"> </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-sanitize.min.js"></script>
+     
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+
+  </head>
+ <body> 
+ 
+ <style>
+        .mul-select{
+            width: 830px;
+        }
+
+    </style> 
+ 
+ <div ng-app="createGroupApp">
+  <script src="/createGroup.js"></script>
+<div ng-controller="createGroup">
+    <!-- The sidebar -->
+
+
+ <nav class="navbar navbar-expand-sm">
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+              User
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+              Log Out
+            </a>
+        </li>
+    </ul>
+  </nav>
+
+    <div class="loginContainer">
+      <div class="">
+        <div class="sidebar">
+          <a class="active" href="">Create group</a>
+          <a href="View.html">View</a>
+          <a href="groupPolicy.html">policy</a>
+          <a href="Delete.html">Delete</a>
+           <a href="rules.html">Rules</a>
+          <a href="ManageGroup.html">Manage Group</a>
+          <a href="ManageUser.html">Manage User</a>
+        </div>
+      </div>
+    </div>
+    
+
+
+  <!-- Page content -->
+  <div class="container">
+
+  <div class="content createcontainer">
+      <h1>Create Group</h1>
+      <div class="form-group">
+        <label >Group Name:</label>
+<input type="text" name="name" ng-model="group.name" ng-trim="true" 
+  required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label >Description:</label>
+<input type="text" name="description" ng-model="group.description" ng-trim="true" 
+  required class="form-control" />
+      </div>
+    
+     <div id="UserSettings">
+          <div class="form-group">
+            <label > Select status : </label>
+            <select name="status" ng-model="group.status" ng-trim="true" required class="form-control" />
+           <option ng-value="false">Active</option>
+                               <option ng-value="true">Inactive</option> 
+            </select>
+            </div>   
+          </div>
+ <div class="form-group">
+       <label > select Policy: </label>
+       <br>
+                    <select class="mul-select" multiple="true">
+                        <option value="policy0">policy0</option>
+                        <option value="policy1">policy1</option>
+                        <option value="policy2">policy2</option>
+
+                    </select>
+</div>
+  <button type="submit" ng-click="saveGroup(group)" class="btn btn-default">Submit</button>
+     
+
+  </div>
+</div>
+</div>
+<!--Navigation bar-->
+<script>
+        $(document).ready(function(){
+            $(".mul-select").select2({
+                    placeholder: "select country", //placeholder
+                    tags: true,
+                    tokenSeparators: ['/',',',';'," "] 
+                });
+            })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Policies</title>
+      <!-- css -->
+      <link rel="stylesheet" type="text/css" href="/styleSheet/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"> </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-sanitize.min.js"></script>
+
+    
+  
+
+  </head>
+ <body ng-app="groupPolicyApp">
+<script src="/groupPolicycontroller.js"></script>
+<div ng-controller="groupPolicy">
+<!--   <style>
+        .mul-select{
+            width: 100%;
+        }
+
+    </style> -->
+    <!-- The sidebar -->
+
+    <nav class="navbar navbar-expand-sm">
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+              User
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+              Log Out
+            </a>
+        </li>
+    </ul>
+  </nav>
+
+    <div class="loginContainer">
+      <div class="">
+        <div class="sidebar" id="Sidebar">
+          <a href="createGroup">Create group</a>
+          <a href="View.html">View</a>
+          <a href="delete.html">Delete</a>
+          <a href="Rules.html">Rules</a>
+          <a class="active" href="Policies.html">Policies</a>
+          <a href="managegroup.html">Manage Group</a>
+          <a href="manageuser.html">Manage User</a>
+        </div>
+      </div>
+      </div>
+      <!-- Page content -->
+      <div class="container">
+
+      <div class="content createcontainer">
+          <h1>Policy Details</h1>
+        <form>
+        <div class="form-group">
+        <label > Description: </label>
+       <!--   <input type="textarea" class="form-control"> -->
+       <input type="text" name="description" ng-model="policy.description" ng-trim="true" 
+  required class="form-control" />
+        </div>
+        <div class="form-group">
+        <label > Execution Sequence: </label>
+        <input type="text" name="execSeq" ng-model="policy.execSeq" ng-trim="true" 
+  required class="form-control" />
+        </div>
+     
+            
+        
+        <div class="form-group">
+        <label > Name </label>
+       <input type="text" name="name" ng-model="policy.name" ng-trim="true" 
+  required class="form-control" />
+        </div>
+         <label > Set Rules : </label>
+          <div class="checkbox">
+        <label><input type="checkbox" value="">  rule-1</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">  rule-2</label>
+      </div>
+      <div class="checkbox disabled">
+        <label><input type="checkbox" value="">  rule-3</label>
+      </div>
+          <div class="form-group">
+            <label > Status: </label>
+            <select class="form-control status">
+           <option ng-value="false">Active</option>
+                               <option ng-value="true">Inactive</option> 
+            </select>
+          </div>
+    
+      
+     <button type="submit" ng-click="savePolicy(policy)" class="btn btn-default">Submit</button>
+        </form>
+
+      </div>
+      </div>
+    </div>
+
+  </body>
+</html>
