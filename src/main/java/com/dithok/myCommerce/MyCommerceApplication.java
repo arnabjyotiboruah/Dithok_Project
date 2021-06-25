@@ -84,6 +84,7 @@ public String setting()
 	return "redirect:/";
 
 }
+
 @GetMapping("/createGroup")
 public String createGroup()
 {

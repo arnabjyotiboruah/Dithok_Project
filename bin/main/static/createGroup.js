@@ -2,6 +2,13 @@ var app=angular.module("createGroupApp",[]);
 app.config(['$qProvider', function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
 }]);
+document.querySelector(document).ready(function(){
+            document.querySelector(".mul-select").select2({
+                    placeholder: "select country", //placeholder
+                    tags: true,
+                    tokenSeparators: ['/',',',';'," "] 
+                });
+            })
 app.controller("createGroup",function($scope,$window,$http)
 {
 	$scope.group={};

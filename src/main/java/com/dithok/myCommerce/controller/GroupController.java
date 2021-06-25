@@ -73,19 +73,19 @@ public class GroupController {
 	public GroupsModel getGroup(@PathVariable("id") long id) {
 		return groupService.getById(id);
 	}
-	@RequestMapping(value="/group/addUser", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public GroupUserModel addUsertoGroup(@RequestBody GroupUserDto groupUser) {
-		UserModel user = userService.findUserByEmail(groupUser.getEmail());
-		GroupsModel group = groupService.getById(groupUser.getId());
-		GroupUserModel userGroup = new GroupUserModel();
-		userGroup.setUser(user);
-		userGroup.setGroup(group);
-		userGroup.setUser_id(user.getId());
-		userGroup.setGroup_id(group.getGroup_id());
-		return groupUserService.addGroupUser(userGroup);
-		
-		
-	}
+//	@RequestMapping(value="/group/addUser", method = RequestMethod.POST,consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
+//	public GroupUserModel addUsertoGroup(@RequestBody GroupUserDto groupUser) {
+//		UserModel user = userService.findUserByEmail(groupUser.getEmail());
+//		GroupsModel group = groupService.getById(groupUser.getId());
+//		GroupUserModel userGroup = new GroupUserModel();
+//		userGroup.setUser(user);
+//		userGroup.setGroup(group);
+//		userGroup.setUser_id(user.getId());
+//		userGroup.setGroup_id(group.getGroup_id());
+//		return groupUserService.addGroupUser(userGroup);
+//		
+//		
+//	}
 	
 	@RequestMapping(value="/group/print", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity pdfReport() throws IOException, ParserConfigurationException, SAXException{
@@ -103,5 +103,15 @@ public class GroupController {
 		
 		
 		
+	}
+	
+	@RequestMapping(value="/group/viewUser/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public String viewUser(@PathVariable("id") long id){
+		return groupUserService.findUserByGroupId(id);
+	}
+	
+	@RequestMapping(value="/group/viewGroup/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public String viewGroup(@PathVariable("id") long id){
+		return groupUserService.findGroupByUserId(id);
 	}
 }
